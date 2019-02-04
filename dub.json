@@ -1,0 +1,9 @@
+{
+    "name": "bibd-mahjong",
+    "authors": [
+        "majiang"
+    ],
+    "description": "A BIBD Mahjong tournament generator.",
+    "copyright": "Copyright (c) 2019, majiang",
+    "license": "TBD"
+}

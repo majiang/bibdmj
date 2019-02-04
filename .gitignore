@@ -1,0 +1,14 @@
+.dub
+docs.json
+__dummy.html
+docs/
+bibd-mahjong.so
+bibd-mahjong.dylib
+bibd-mahjong.dll
+bibd-mahjong.a
+bibd-mahjong.lib
+bibd-mahjong-test-*
+*.exe
+*.o
+*.obj
+*.lst
