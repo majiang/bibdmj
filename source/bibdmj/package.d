@@ -2,12 +2,12 @@ module bibdmj;
 
 import std.algorithm, std.array, std.range;
 
-class HalvedTablesTCTSearcher : TripleCircleTournamentSearcher
+class LineSymmetryHalvedTablesTCTSearcher : TripleCircleTournamentSearcher
 {
     private this ()
     {
     }
-    TripleCircleTournamentSearcher init(ParameterRelations parameterRelations)
+    static LineSymmetryHalvedTablesTCTSearcher init(ParameterRelations parameterRelations)
     {
         assert (false);
     }
@@ -27,7 +27,6 @@ class HalvedTablesTCTSearcher : TripleCircleTournamentSearcher
 
 interface TripleCircleTournamentSearcher
 {
-    TripleCircleTournamentSearcher init(ParameterRelations parameterRelations);
     TripleCircleTournament front();
     void popFront();
     bool empty();
@@ -53,6 +52,16 @@ class TripleCircleTournament : PSTTournament
             }
         }
         return ret;
+    }
+    this (ParameterRelations parameterRelations,
+            size_t centerPlayer, size_t centerTable,
+            size_t[][3] players, size_t[][3] tables)
+    {
+        this.parameterRelations = parameterRelations;
+        this.centerPlayer = centerPlayer;
+        this.centerTable = centerTable;
+        this.players = players;
+        this.tables = tables;
     }
     size_t centerPlayer, centerTable;
     size_t[][3] players, tables;

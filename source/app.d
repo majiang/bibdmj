@@ -4,4 +4,7 @@ void main(string[] args)
 
     immutable n = args[1].to!size_t;
     ParameterRelations(n).writeln;
+    foreach (tct; cast(TripleCircleTournamentSearcher)LineSymmetryHalvedTablesTCTSearcher.init(ParameterRelations(n)))
+    {
+    }
 }
