@@ -11,25 +11,15 @@ class LineSymmetryHalvedTablesTCTSearcher : TripleCircleTournamentSearcher
     {
         assert (false);
     }
-    TripleCircleTournament front()
+    int opApply(scope int delegate (ref TripleCircleTournament) dg)
     {
-        assert (false);
-    }
-    void popFront()
-    {
-        assert (false);
-    }
-    bool empty()
-    {
-        assert (false);
+        return 0;
     }
 }
 
 interface TripleCircleTournamentSearcher
 {
-    TripleCircleTournament front();
-    void popFront();
-    bool empty();
+    int opApply(scope int delegate (ref TripleCircleTournament) dg);
 }
 
 class TripleCircleTournament : PSTTournament
